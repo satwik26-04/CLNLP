@@ -1,0 +1,5 @@
+Natural Language Processing (NLP) is a fascinating field of Artificial Intelligence. It enables computers to understand human language. NLP is used in many real-world applications, such as chatbots, machine translation, sentiment analysis, and text summarization.
+
+Text tokenization is one of the first steps in NLP. Sentence tokenization divides a paragraph into individual sentences. Word tokenization divides each sentence into individual words and tokens.
+
+For example, a chatbot receives thousands of messages every day. The system processes these messages and identifies useful information. This information can then be used to provide better responses to users.

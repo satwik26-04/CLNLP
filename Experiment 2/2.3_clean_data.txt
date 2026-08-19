@@ -1,0 +1,9 @@
+Natural Language Processing is an important field of Artificial Intelligence.
+It is used in many applications such as chatbots, machine translation, sentiment analysis, and text summarization.
+
+The main purpose of NLP is to enable computers to understand and process human language.
+A computer can analyze a large amount of text in a short period of time.
+The removal of stop words is one of the common steps in text preprocessing.
+
+Stop words are commonly occurring words such as the, is, a, an, in, of, and, to, for, on, with, from, by, this, that, and it.
+Removing these words can reduce the size of the text and improve the efficiency of some NLP applications.

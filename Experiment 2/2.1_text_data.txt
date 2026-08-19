@@ -1,0 +1,9 @@
+Natural Language Processing (NLP) is a branch of Artificial Intelligence.  It helps computers understand and process human language.
+
+In 2026, NLP is used in many applications such as chatbots, machine translation, sentiment analysis, and text summarization!!!
+
+Text preprocessing is an important step in NLP.   It includes several operations such as cleaning text, removing punctuation, and removing unnecessary numbers.
+
+For example, a chatbot may process 1000+ customer messages every day. These messages can contain CAPITAL letters, numbers like 12345, punctuation marks!!!, and   extra spaces.
+
+The main goal of text preprocessing is to convert raw text into a clean and consistent format. This makes the text easier to analyze and use for further Natural Language Processing tasks.
