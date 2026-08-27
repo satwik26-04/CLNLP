@@ -33,6 +33,11 @@
   - Approach C: spaCy Language Pipeline (en_core_web_sm)
 - **Experiment 2.3**: Stop words detection, isolation, and removal using the NLTK English stopwords corpus to produce filtered alphanumeric content tokens.
 
+### Experiment 3: Stemming, Lemmatization, and Regular Expressions
+- **Experiment 3.1**: Rule-based suffix stripping using the Porter Stemmer algorithm on target inflectional and derivational words.
+- **Experiment 3.2**: Morphological reduction using WordNet Lemmatizer comparing default noun lemmatization against POS-aware lemmatization for nouns, verbs, and adjectives.
+- **Experiment 3.3**: Information extraction using Regular Expressions (Regex) to extract email addresses, URLs, mobile numbers, hashtags, and social media mentions from announcement text.
+
 ---
 
 ## Repository Structure
@@ -45,12 +50,16 @@ CLNLP/
 │   ├── Experiment-1.docx
 │   ├── Experiment_1.ipynb
 │   └── WALKTHROUGH.md
-└── Experiment 2/
-    ├── 2.1_text_data.txt
-    ├── 2.2_tokenization_data.txt
-    ├── 2.3_clean_data.txt
-    ├── Experimemt-2.docx
-    ├── Experiment_2.ipynb
+├── Experiment 2/
+│   ├── 2.1_text_data.txt
+│   ├── 2.2_tokenization_data.txt
+│   ├── 2.3_clean_data.txt
+│   ├── Experimemt-2.docx
+│   ├── Experiment_2.ipynb
+│   └── WALKTHROUGH.md
+└── Experiment 3/
+    ├── Experiment-3.docx
+    ├── Experiment_3.ipynb
     └── WALKTHROUGH.md
 ```
 
