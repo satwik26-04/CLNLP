@@ -38,6 +38,11 @@
 - **Experiment 3.2**: Morphological reduction using WordNet Lemmatizer comparing default noun lemmatization against POS-aware lemmatization for nouns, verbs, and adjectives.
 - **Experiment 3.3**: Information extraction using Regular Expressions (Regex) to extract email addresses, URLs, mobile numbers, hashtags, and social media mentions from announcement text.
 
+### Experiment 4: Term Frequency Analysis, Named Entity Recognition, and TF-IDF
+- **Experiment 4.1**: Term Frequency analysis and Named Entity Recognition (NER) using spaCy, saving word frequencies to CSV and identifying the top 10 most frequent terms.
+- **Experiment 4.2**: Term Frequency analysis using pure Python without external toolkits, exporting word frequencies to CSV and identifying top 10 terms.
+- **Experiment 4.3**: End-to-end multi-document TF-IDF pipeline implemented completely from scratch without external NLP libraries, calculating TF, DF, IDF, and TF-IDF scores across three documents.
+
 ---
 
 ## Repository Structure
@@ -57,9 +62,16 @@ CLNLP/
 │   ├── Experimemt-2.docx
 │   ├── Experiment_2.ipynb
 │   └── WALKTHROUGH.md
-└── Experiment 3/
-    ├── Experiment-3.docx
-    ├── Experiment_3.ipynb
+├── Experiment 3/
+│   ├── Experiment-3.docx
+│   ├── Experiment_3.ipynb
+│   └── WALKTHROUGH.md
+└── Experiment 4/
+    ├── 4.1_4.2_input.txt
+    ├── 4.1_term_frequency_toolkit.csv
+    ├── 4.2_term_frequency_pure_python.csv
+    ├── Experiment-4_ Term Frequency and NER.docx
+    ├── Experiment_4.ipynb
     └── WALKTHROUGH.md
 ```
 
