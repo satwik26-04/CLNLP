@@ -462,6 +462,7 @@ embeddings,1
 vectors,1
 space,1
 vector,1
+word2vec,1
 glove,1
 fasttext,1
 been,1
@@ -633,6 +634,7 @@ performance,1
 essential,1
 measuring,1
 accuracy,1
+f1score,1
 automatic,1
 bleu,1
 measure,1
