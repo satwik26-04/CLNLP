@@ -1,0 +1,122 @@
+Natural language processing is a branch of artificial intelligence that
+enables computers to understand, interpret, and generate human language.
+Natural language processing combines linguistics, computer science, and
+machine learning to process large amounts of natural language data.
+
+Tokenization is one of the fundamental steps in natural language processing.
+A tokenizer divides text into smaller units called tokens. Tokens may be
+words, characters, or subword units. Word-level tokenization is simple and
+easy to understand, but it may have difficulty handling rare and unknown
+words.
+
+Subword-level tokenization provides an effective solution to the problem
+of rare words. Instead of representing every complete word as a separate
+token, a subword tokenizer represents a word using smaller meaningful units.
+For example, the word playing can be represented as play and ing. Similarly,
+the word unhappy can be represented as un and happy.
+
+Byte Pair Encoding is a popular subword tokenization algorithm. BPE starts
+with a vocabulary containing individual characters and repeatedly merges
+the most frequent pair of adjacent symbols. The merging process continues
+until the desired vocabulary size is obtained. Frequent character sequences
+gradually become larger subword units.
+
+BPE is useful because it provides a balance between word-level and
+character-level tokenization. Common words can be represented as complete
+tokens, while rare words can be divided into smaller subword units. This
+allows the tokenizer to represent words that were not frequently observed
+during training.
+
+Machine learning algorithms require numerical representations of text.
+After tokenization, each token can be assigned a unique numerical token ID.
+These token IDs can then be converted into vectors and supplied to machine
+learning or deep learning models.
+
+Deep learning has significantly improved natural language processing.
+Neural networks can learn complex patterns from large collections of text.
+Recurrent neural networks, long short-term memory networks, convolutional
+neural networks, and transformer models have all been used for language
+processing tasks.
+
+Transformers use attention mechanisms to identify relationships between
+different tokens in a sequence. The attention mechanism allows a model to
+consider important words even when they occur far apart in a sentence.
+Transformer-based models have become widely used for text classification,
+machine translation, question answering, summarization, and text generation.
+
+Language models learn statistical relationships between tokens. A language
+model can predict the next token based on the tokens that appear before it.
+Modern language models are trained on very large text corpora containing
+books, articles, websites, documents, and other forms of written language.
+
+Consider the word internationalization. A word-level tokenizer may treat
+internationalization as one token. A subword tokenizer can divide it into
+smaller units such as international, ization, or other learned subword
+segments. The exact segmentation depends on the vocabulary and the BPE
+merge rules learned from the training corpus.
+
+Similarly, words such as computational, communication, representation,
+classification, information, educational, environmental, technological,
+development, understanding, processing, and programming contain recurring
+subword patterns. BPE can learn these recurring patterns from the corpus.
+
+For example, the suffixes ing, ed, tion, ment, ness, and able may occur
+frequently in a corpus. BPE can learn frequent sequences containing these
+characters and use them as subword tokens. Prefixes such as un, re, pre,
+dis, and con may also appear frequently and can become useful subword units.
+
+A larger corpus generally produces more useful BPE vocabulary because the
+algorithm has more examples from which to learn frequent character pairs.
+A small corpus may produce vocabulary that is specific to the sentences
+used for training. Therefore, a representative corpus is important when
+building a practical tokenizer.
+
+In an NLP experiment, the corpus can be converted to lowercase and divided
+into words before learning BPE merges. Each word can initially be represented
+as a sequence of characters followed by an end-of-word marker. The algorithm
+then counts adjacent symbol pairs and identifies the most frequent pair.
+
+The most frequent pair is merged into a new symbol. After every merge, the
+pair frequencies are recalculated. This process is repeated several times.
+The resulting collection of symbols forms the learned subword vocabulary.
+
+Suppose a corpus contains many occurrences of the sequence t and h.
+The BPE algorithm may first learn the pair th. If the sequence th occurs
+frequently with e, the algorithm may subsequently learn the sequence the.
+With additional training data, longer frequently occurring sequences can
+be learned.
+
+BPE is therefore a data-driven tokenization technique. It does not require
+a manually constructed list of prefixes, suffixes, or linguistic rules.
+Instead, the vocabulary is learned automatically from the statistical
+properties of the training corpus.
+
+Subword tokenization is particularly useful for multilingual applications.
+Different languages may have different word formation patterns, and a
+word-level vocabulary can become extremely large. Subword units can reduce
+the vocabulary size while still allowing the tokenizer to represent many
+different words.
+
+Text preprocessing can include converting characters to lowercase,
+removing unnecessary spaces, normalizing punctuation, and separating
+sentences. However, preprocessing decisions should be selected according
+to the objective of the NLP application.
+
+A BPE tokenizer can also be evaluated by examining the number of unique
+tokens, vocabulary size, number of merges, average tokens per word, and
+frequency of individual subword units. These measurements help students
+understand how the tokenizer behaves as the number of BPE merges changes.
+
+In this laboratory experiment, the above corpus can be used as training
+data for implementing BPE without using a pretrained tokenizer. Students
+can experiment with different numbers of merges and compare the resulting
+subword vocabularies.
+
+The tokenizer can then be tested on new words such as naturalization,
+internationalization, computationally, unbelievable, preprocessing,
+classification, communication, renewable, hydrokinetic, multilingual,
+understanding, and modernization.
+
+The purpose of this experiment is to understand how BPE learns reusable
+subword units and how these units can be converted into token IDs for use
+in natural language processing systems.
