@@ -43,6 +43,12 @@
 - **Experiment 4.2**: Term Frequency analysis using pure Python without external toolkits, exporting word frequencies to CSV and identifying top 10 terms.
 - **Experiment 4.3**: End-to-end multi-document TF-IDF pipeline implemented completely from scratch without external NLP libraries, calculating TF, DF, IDF, and TF-IDF scores across three documents.
 
+### Experiment 5: Subword Tokenization and Part-of-Speech (POS) Tagging
+- **Experiment 5.1**: Subword-level tokenization using Byte Pair Encoding (BPE), implemented both with a pretrained GPT-2 model and from scratch on `input_sub_word_data.txt`.
+- **Experiment 5.2**: Subword-level tokenization using SentencePiece, implemented both with a pretrained T5 model and by training a custom BPE model from scratch on `input_sub_word_data.txt`.
+- **Experiment 5.3**: Sentence-level Part-of-Speech (POS) tagging on a target sentence with human-readable tag descriptions using spaCy and NLTK.
+- **Experiment 5.4**: Corpus-level Part-of-Speech tagging and frequency profiling on `input_sub_word_data.txt` using spaCy.
+
 ---
 
 ## Repository Structure
@@ -66,12 +72,17 @@ CLNLP/
 │   ├── Experiment-3.docx
 │   ├── Experiment_3.ipynb
 │   └── WALKTHROUGH.md
-└── Experiment 4/
-    ├── 4.1_4.2_input.txt
-    ├── 4.1_term_frequency_toolkit.csv
-    ├── 4.2_term_frequency_pure_python.csv
-    ├── Experiment-4_ Term Frequency and NER.docx
-    ├── Experiment_4.ipynb
+├── Experiment 4/
+│   ├── 4.1_4.2_input.txt
+│   ├── 4.1_term_frequency_toolkit.csv
+│   ├── 4.2_term_frequency_pure_python.csv
+│   ├── Experiment-4_ Term Frequency and NER.docx
+│   ├── Experiment_4.ipynb
+│   └── WALKTHROUGH.md
+└── Experiment 5/
+    ├── Experiment-5.docx
+    ├── input_sub_word_data.txt
+    ├── Experiment_5.ipynb
     └── WALKTHROUGH.md
 ```
 
@@ -82,6 +93,6 @@ CLNLP/
 To run the notebooks locally, install the required dependencies:
 
 ```bash
-pip install pandas matplotlib seaborn nltk spacy
+pip install pandas matplotlib seaborn nltk spacy transformers tiktoken sentencepiece
 python -m spacy download en_core_web_sm
 ```
