@@ -43,11 +43,14 @@
 - **Experiment 4.2**: Term Frequency analysis using pure Python without external toolkits, exporting word frequencies to CSV and identifying top 10 terms.
 - **Experiment 4.3**: End-to-end multi-document TF-IDF pipeline implemented completely from scratch without external NLP libraries, calculating TF, DF, IDF, and TF-IDF scores across three documents.
 
-### Experiment 5: Subword Tokenization and Part-of-Speech (POS) Tagging
+### Experiment 5: Subword Tokenization, Part-of-Speech Tagging, and Word2Vec Embeddings
 - **Experiment 5.1**: Subword-level tokenization using Byte Pair Encoding (BPE), implemented both with a pretrained GPT-2 model and from scratch on `input_sub_word_data.txt`.
 - **Experiment 5.2**: Subword-level tokenization using SentencePiece, implemented both with a pretrained T5 model and by training a custom BPE model from scratch on `input_sub_word_data.txt`.
 - **Experiment 5.3**: Sentence-level Part-of-Speech (POS) tagging on a target sentence with human-readable tag descriptions using spaCy and NLTK.
 - **Experiment 5.4**: Corpus-level Part-of-Speech tagging and frequency profiling on `input_sub_word_data.txt` using spaCy.
+- **Experiment 5.5**: Training a Word2Vec Continuous Bag-of-Words (CBOW) model on `corpus.txt`, displaying dense vector representations, and finding the three most similar words.
+- **Experiment 5.6**: Training a Word2Vec Skip-Gram model on `corpus.txt`, retrieving dense vectors for "language", and displaying the five most similar words.
+- **Experiment 5.7**: Calculating cosine similarity between specific word pairs using the trained Word2Vec model.
 
 ---
 
@@ -80,6 +83,7 @@ CLNLP/
 │   ├── Experiment_4.ipynb
 │   └── WALKTHROUGH.md
 └── Experiment 5/
+    ├── corpus.txt
     ├── Experiment-5.docx
     ├── input_sub_word_data.txt
     ├── Experiment_5.ipynb
@@ -93,6 +97,6 @@ CLNLP/
 To run the notebooks locally, install the required dependencies:
 
 ```bash
-pip install pandas matplotlib seaborn nltk spacy transformers tiktoken sentencepiece
+pip install pandas matplotlib seaborn nltk spacy transformers tiktoken sentencepiece gensim
 python -m spacy download en_core_web_sm
 ```
