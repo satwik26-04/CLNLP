@@ -52,6 +52,23 @@
 - **Experiment 5.6**: Training a Word2Vec Skip-Gram model on `corpus.txt`, retrieving dense vectors for "language", and displaying the five most similar words.
 - **Experiment 5.7**: Calculating cosine similarity between specific word pairs using the trained Word2Vec model.
 
+### Experiment 6: GloVe Word Embeddings and Statistical N-gram Language Modeling
+- **Experiment 6.1**: GloVe word representations trained from scratch on custom corpus using global co-occurrence matrix construction, harmonic context weighting, and AdaGrad optimization.
+- **Experiment 6.2**: Semantic similarity analysis and analogy evaluation using pretrained GloVe vectors (`glove-wiki-gigaword-50`).
+- **Experiment 6.3**: Statistical N-gram language modeling from scratch implementing Unigram, Bigram, and Trigram Maximum Likelihood Estimation (MLE) with conditional probabilities and greedy next-word prediction.
+
+### Experiment 7: Text Classification with Classical ML, Recurrent Neural Networks, and Transformers
+- **Experiment 7.1**: Baseline text sentiment classification using TF-IDF feature extraction with Logistic Regression on the Stanford IMDB movie review dataset.
+- **Experiment 7.2**: Deep sequential modeling for sentiment classification using a Bidirectional LSTM (BiLSTM) network implemented in PyTorch.
+- **Experiment 7.3**: Deep contextual sequence modeling using a custom Transformer Encoder architecture with multi-head self-attention and positional encodings in PyTorch.
+- **Experiment 7.4**: Transfer learning and sequence classification using a pretrained BERT model (`distilbert/distilbert-base-uncased-finetuned-sst-2-english`).
+- **Experiment 7.5**: Comprehensive comparative performance evaluation across all four architectures reporting Accuracy, Precision, Recall, F1-Score, and Confusion Matrices.
+
+### Experiment 8: Multilingual Abstractive Text Summarization and Evaluation
+- **Experiment 8.1**: Abstractive text summarization for low-resource Indic languages (Hindi) using sequence-to-sequence transformer architectures: mT5 (`google/mt5-small`) and mBART (`ai4bharat/IndicBART-XLSum`).
+- **Experiment 8.2**: Quantitative evaluation of generated abstractive summaries using n-gram overlap metrics (ROUGE-1, ROUGE-2, ROUGE-L) with a Devanagari-preserving multilingual tokenizer.
+- **Experiment 8.3**: Semantic content preservation assessment using multilingual BERT (`google-bert/bert-base-multilingual-cased`) mean-pooled contextual embeddings and cosine similarity.
+
 ---
 
 ## Repository Structure
@@ -82,12 +99,26 @@ CLNLP/
 │   ├── Experiment-4_ Term Frequency and NER.docx
 │   ├── Experiment_4.ipynb
 │   └── WALKTHROUGH.md
-└── Experiment 5/
-    ├── corpus.txt
-    ├── Experiment-5.docx
-    ├── input_sub_word_data.txt
-    ├── Experiment_5.ipynb
-    └── WALKTHROUGH.md
+├── Experiment 5/
+│   ├── corpus.txt
+│   ├── Experiment-5.docx
+│   ├── input_sub_word_data.txt
+│   ├── Experiment_5.ipynb
+│   └── WALKTHROUGH.md
+├── Experiment 6/
+│   ├── Experiment-6.docx
+│   ├── Experiment_6.ipynb
+│   ├── glove_corpus.txt
+│   └── WALKTHROUGH.md
+├── Experiment 7/
+│   ├── Experiment-7.docx
+│   ├── Experiment_7.ipynb
+│   └── WALKTHROUGH.md
+└── Experiment 8/
+    ├── Experiment-8.pdf
+    ├── Experiment_8.ipynb
+    ├── WALKTHROUGH.md
+    └── xlsum_hindi_sample.jsonl
 ```
 
 ---
@@ -97,6 +128,6 @@ CLNLP/
 To run the notebooks locally, install the required dependencies:
 
 ```bash
-pip install pandas matplotlib seaborn nltk spacy transformers tiktoken sentencepiece gensim
+pip install pandas numpy matplotlib seaborn scikit-learn nltk spacy transformers tiktoken sentencepiece gensim torch rouge-score
 python -m spacy download en_core_web_sm
 ```
