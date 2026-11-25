@@ -69,6 +69,18 @@
 - **Experiment 8.2**: Quantitative evaluation of generated abstractive summaries using n-gram overlap metrics (ROUGE-1, ROUGE-2, ROUGE-L) with a Devanagari-preserving multilingual tokenizer.
 - **Experiment 8.3**: Semantic content preservation assessment using multilingual BERT (`google-bert/bert-base-multilingual-cased`) mean-pooled contextual embeddings and cosine similarity.
 
+### Experiment 9: Multiclass Cyberbullying Detection in Code-Mixed Hinglish (`MC-Hinglish1.0`)
+- **Experiment 9.1**: Exploratory data analysis and code-mixing profiling on `sahinurlaskar/MC-Hinglish1.0` (7,392 deduplicated training tweets and 1,000 test tweets across 7 classes), diagnosing class imbalance, elongation, and copy-paste outlier skew.
+- **Experiment 9.2**: Hinglish orthographic normalization, elongation compression, spam token deduplication, and 5-fold Stratified CV ablation comparing Porter Stemming vs. WordNet Lemmatization alongside Chi-Square discriminative n-gram analysis.
+- **Experiment 9.3**: Sparse hybrid Word (1-2 grams) + Character (`char_wb` 3-5 grams) TF-IDF classification using Complement Naive Bayes, Balanced Logistic Regression, and Balanced Linear SVM (`0.7019` Abusive-F1).
+- **Experiment 9.4**: Grounded dense embeddings concatenating custom 100-d Skip-Gram FastText with pretrained 100-d GloVe vectors, comparing TF-IDF-weighted averaging against a Multi-Scale 1D-CNN with Global Max-Pooling (`68.80%` accuracy) and a Hybrid Sparse + Dense Margin Ensemble (`76.00%` accuracy, `0.7453` Macro-F1).
+
+### Experiment 10: Low-Resource Neural Machine Translation (`WMT 2026 Indic MT: English to Bodo`)
+- **Experiment 10.1**: Parallel corpus collection, Unicode NFC normalization, deduplication, and length-ratio filtering on the WMT 2026 Indic MT (`INDICNE-CORP 2.0`, Category II) English-to-Bodo dataset (`15,214` raw pairs -> `12,762` cleaned pairs: `11,762` train, `500` val, `500` test).
+- **Experiment 10.2**: From-scratch Seq2Seq GRU encoder-decoder with Luong dot-product attention and Devanagari vowel-matra-preserving tokenization (`11.01` ChrF++).
+- **Experiment 10.3**: Zero-shot vs. end-to-end fine-tuned `Helsinki-NLP/opus-mt-en-mul` (`MarianMT`) prompted with target token `>>brx<<`, boosting BLEU (`0.28 -> 23.69`), ChrF++ (`0.82 -> 51.93`), and mBERT-F1 (`55.04 -> 85.56`) while reducing TER (`113.35 -> 59.64`).
+- **Experiment 10.4**: Quantitative benchmarking and visualization across `sacrebleu` BLEU, ChrF++, TER, and mBERT BERTScore-F1 with qualitative Devanagari Bodo translation inspection.
+
 ---
 
 ## Repository Structure
@@ -76,6 +88,12 @@
 ```text
 CLNLP/
 ├── README.md
+├── CLNLP_Lab_Report.pdf
+├── upes logo.png
+├── Experiment9.ipynb
+├── Experiment9_Presentation.pptx
+├── Experiment10.ipynb
+├── Experiment10_Presentation.pptx
 ├── Experiment 1/
 │   ├── employee_information_100.csv
 │   ├── Experiment-1.docx
@@ -128,6 +146,6 @@ CLNLP/
 To run the notebooks locally, install the required dependencies:
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn nltk spacy transformers tiktoken sentencepiece gensim torch rouge-score
+pip install pandas numpy matplotlib seaborn scikit-learn nltk spacy transformers tiktoken sentencepiece gensim torch rouge-score sacrebleu bert-score openpyxl
 python -m spacy download en_core_web_sm
 ```
